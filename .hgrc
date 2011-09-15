@@ -1,0 +1,13 @@
+[ui]
+merge = vimdiff
+username = Sam Jacoby <sam@threepress.org>
+verbose = True
+[extensions]
+hgext.graphlog=
+fetch=
+purge=
+mq=
+transplant=
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -d $base $local $output $other +close +close
