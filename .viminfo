@@ -69,22 +69,24 @@ $top-menu
 # Registers:
 "0	LINE	0
 	alias ofps='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/alistapart/responsive-web-design'
-"1	LINE	0
-	alias ibis20='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/alistapart/responsive-web-design'
+""1	LINE	0
+	Lets keep this updated.
 "2	LINE	0
-	
+	alias ibis20='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/alistapart/responsive-web-design'
 "3	LINE	0
 	
 "4	LINE	0
-	      augroup END
-"5	LINE	0
 	
+"5	LINE	0
+	      augroup END
 "6	LINE	0
 	
 "7	LINE	0
+	
+"8	LINE	0
 	      "for CSS, also have things in braces indented:
 	      autocmd BufNewFile,BufRead *.txt set filetype=human
-"8	LINE	0
+"9	LINE	0
 	      autocmd FileType css set smartindent
 	      autocmd FileType htmldjango set shiftwidth=2
 	      autocmd FileType html set shiftwidth=2
@@ -93,8 +95,6 @@ $top-menu
 	      autocmd FileType javascript set shiftwidth=2
 	      autocmd FileType xhtml set shiftwidth=2
 	      autocmd FileType pde set filetype=java
-"9	LINE	0
-	      autocmd BFileType pde set filetype=java
 "a	LINE	0
 	                        **self.header)
 "k	CHAR	0
@@ -106,22 +106,23 @@ $top-menu
 "u	CHAR	0
 	887
 <ery_alluuu/query_alljk/jk/jk/jjjjjjjjjjjjjjjkkkkkkkkkkkkjkhjjjjjjjjjjjjjjjjjjjjjjjjjjjkjjjjjjjjkkkjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjkkkkkkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjklllkjhjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjjjjjjjkkkkkkkkkkkkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkjgg/transatiokbkbkbkbaction/jjkkjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkjjjkjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkhhhd$isuccessjk:wjjjjjjjjkkkkkkkkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjhhjkjjjjjkhhlkjkjjkkjjkkjjkkjklllkkjjhhkjjkjjjkkjkjjkkkkjjjjjjjjkkkkkkkjjjjjjjjjkkjjgg/add_book/jkjkkkkkkkkkkkkkkkkjjjjjjjjjjjjjjjjjjjjjjkkkkjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjjLe kkk
-""-	CHAR	0
+"-	CHAR	0
 	o
 
 # File marks:
-'0  4  16  ~/.bash_aliases
-'1  21  42  ~/.bash_aliases
-'2  64  0  ~/Development/htm/basic/layout/base.j2
-'3  1  0  ~/Development/htm/basic/README.markdown
-'4  17  0  ~/Development/htm/site/layout/macros.j2
-'5  6  0  ~/Development/htm/site/layout/listing.j2
-'6  1  5  ~/Development/htm/site/info.yaml
-'7  1  0  ~/Development/htm/site/README.html
-'8  54  11  ~/Development/htm/basic/layout/base.j2
-'9  9  0  ~/Development/htm/basic/content/index.html
+'0  1  15  ~/.git/COMMIT_EDITMSG
+'1  4  16  ~/.bash_aliases
+'2  21  42  ~/.bash_aliases
+'3  64  0  ~/Development/htm/basic/layout/base.j2
+'4  1  0  ~/Development/htm/basic/README.markdown
+'5  17  0  ~/Development/htm/site/layout/macros.j2
+'6  6  0  ~/Development/htm/site/layout/listing.j2
+'7  1  5  ~/Development/htm/site/info.yaml
+'8  1  0  ~/Development/htm/site/README.html
+'9  54  11  ~/Development/htm/basic/layout/base.j2
 
 # Jumplist (newest first):
+-'  1  15  ~/.git/COMMIT_EDITMSG
 -'  4  16  ~/.bash_aliases
 -'  21  124  ~/.bash_aliases
 -'  1  0  ~/.bash_aliases
@@ -214,8 +215,19 @@ $top-menu
 -'  8  34  ~/Development/katran/env-katran/katran/entries/templates/entries/book_detail.html
 -'  6  0  ~/Development/katran/env-katran/katran/entries/templates/entries/book_detail.html
 -'  1  0  ~/Development/katran/env-katran/katran/entries/templates/entries/book_detail.html
+-'  4  16  ~/.bash_aliases
+-'  21  124  ~/.bash_aliases
+-'  1  0  ~/.bash_aliases
+-'  64  0  ~/Development/htm/basic/layout/base.j2
+-'  1  0  ~/Development/htm/basic/layout/base.j2
 
 # History of marks within files (newest to oldest):
+
+> ~/.git/COMMIT_EDITMSG
+	"	1	15
+	^	1	16
+	.	1	15
+	+	1	15
 
 > ~/.bash_aliases
 	"	4	16
@@ -2378,9 +2390,3 @@ $top-menu
 
 > ~/Development/katran/env-katran/katran/templates/entries/detail.html
 	"	6	12
-
-> ~/Development/katran/env-katran/katran/templates/page-column.html
-	"	15	4
-	.	15	0
-	+	14	17
-	+	15	0
