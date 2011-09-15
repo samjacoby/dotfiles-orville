@@ -17,7 +17,9 @@
 $top-menu
 
 # Command Line History (newest to oldest):
+:q
 :wq
+:ConqueTermSplit ls -la
 :w
 :ConqueTerm cd ~/Development/threepress.org.svn.threepress.clients/oreillymedia/repos/ofps2/ofps20/kkk
 :bw
@@ -29,14 +31,12 @@ $top-menu
 :ConqueTerm
 :split !
 :split !shell
-:q
 :e
 :set filetype=c
 :set filetype=java
 :q!
 :fi:q
 :set filetype
-:split ~/.vimrc
 
 # Search String History (newest to oldest):
 ??Dev
@@ -70,31 +70,24 @@ $top-menu
 "0	LINE	0
 	alias ofps='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/alistapart/responsive-web-design'
 ""1	LINE	0
-	Lets keep this updated.
-"2	LINE	0
-	alias ibis20='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/alistapart/responsive-web-design'
-"3	LINE	0
 	
+"2	LINE	0
+	Lets keep this updated.
+"3	LINE	0
+	alias ibis20='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/alistapart/responsive-web-design'
 "4	LINE	0
 	
 "5	LINE	0
-	      augroup END
-"6	LINE	0
 	
+"6	LINE	0
+	      augroup END
 "7	LINE	0
 	
 "8	LINE	0
+	
+"9	LINE	0
 	      "for CSS, also have things in braces indented:
 	      autocmd BufNewFile,BufRead *.txt set filetype=human
-"9	LINE	0
-	      autocmd FileType css set smartindent
-	      autocmd FileType htmldjango set shiftwidth=2
-	      autocmd FileType html set shiftwidth=2
-	      autocmd FileType css set shiftwidth=2
-	      autocmd FileType scss set shiftwidth=2
-	      autocmd FileType javascript set shiftwidth=2
-	      autocmd FileType xhtml set shiftwidth=2
-	      autocmd FileType pde set filetype=java
 "a	LINE	0
 	                        **self.header)
 "k	CHAR	0
@@ -110,19 +103,77 @@ $top-menu
 	o
 
 # File marks:
-'0  1  43  ~/.git/COMMIT_EDITMSG
-'1  1  2  ~/.vim/.gitignore
-'2  4  16  ~/.bash_aliases
-'3  21  42  ~/.bash_aliases
-'4  64  0  ~/Development/htm/basic/layout/base.j2
-'5  1  0  ~/Development/htm/basic/README.markdown
-'6  17  0  ~/Development/htm/site/layout/macros.j2
-'7  6  0  ~/Development/htm/site/layout/listing.j2
-'8  1  5  ~/Development/htm/site/info.yaml
-'9  1  0  ~/Development/htm/site/README.html
+'0  1  0  ~/.git/COMMIT_EDITMSG
+'1  8  0  ~/ls -la - 1
+'2  1  0  ~/.eaglerc
+'3  1  2  ~/.vim/.gitignore
+'4  4  16  ~/.bash_aliases
+'5  21  42  ~/.bash_aliases
+'6  64  0  ~/Development/htm/basic/layout/base.j2
+'7  1  0  ~/Development/htm/basic/README.markdown
+'8  17  0  ~/Development/htm/site/layout/macros.j2
+'9  6  0  ~/Development/htm/site/layout/listing.j2
 
 # Jumplist (newest first):
--'  1  43  ~/.git/COMMIT_EDITMSG
+-'  1  0  ~/.git/COMMIT_EDITMSG
+-'  8  0  ~/ls -la - 1
+-'  54  0  ~/ls -la - 1
+-'  53  0  ~/ls -la - 1
+-'  52  0  ~/ls -la - 1
+-'  51  0  ~/ls -la - 1
+-'  50  0  ~/ls -la - 1
+-'  49  0  ~/ls -la - 1
+-'  48  0  ~/ls -la - 1
+-'  47  0  ~/ls -la - 1
+-'  46  0  ~/ls -la - 1
+-'  45  0  ~/ls -la - 1
+-'  44  0  ~/ls -la - 1
+-'  43  0  ~/ls -la - 1
+-'  42  0  ~/ls -la - 1
+-'  41  0  ~/ls -la - 1
+-'  40  0  ~/ls -la - 1
+-'  39  0  ~/ls -la - 1
+-'  38  0  ~/ls -la - 1
+-'  37  0  ~/ls -la - 1
+-'  36  0  ~/ls -la - 1
+-'  35  0  ~/ls -la - 1
+-'  34  0  ~/ls -la - 1
+-'  33  0  ~/ls -la - 1
+-'  32  0  ~/ls -la - 1
+-'  31  0  ~/ls -la - 1
+-'  30  0  ~/ls -la - 1
+-'  29  0  ~/ls -la - 1
+-'  28  0  ~/ls -la - 1
+-'  27  0  ~/ls -la - 1
+-'  26  0  ~/ls -la - 1
+-'  25  0  ~/ls -la - 1
+-'  24  0  ~/ls -la - 1
+-'  23  0  ~/ls -la - 1
+-'  22  0  ~/ls -la - 1
+-'  21  0  ~/ls -la - 1
+-'  20  0  ~/ls -la - 1
+-'  19  0  ~/ls -la - 1
+-'  18  0  ~/ls -la - 1
+-'  17  0  ~/ls -la - 1
+-'  16  0  ~/ls -la - 1
+-'  15  0  ~/ls -la - 1
+-'  14  0  ~/ls -la - 1
+-'  13  0  ~/ls -la - 1
+-'  12  0  ~/ls -la - 1
+-'  11  0  ~/ls -la - 1
+-'  10  0  ~/ls -la - 1
+-'  9  0  ~/ls -la - 1
+-'  7  0  ~/ls -la - 1
+-'  6  0  ~/ls -la - 1
+-'  5  0  ~/ls -la - 1
+-'  4  0  ~/ls -la - 1
+-'  3  0  ~/ls -la - 1
+-'  2  0  ~/ls -la - 1
+-'  1  0  ~/ls -la - 1
+-'  12  0  ~/.gitignore
+-'  1  0  ~/.gitignore
+-'  1  0  ~/.eaglerc
+-'  402  0  ~/.eaglerc
 -'  1  2  ~/.vim/.gitignore
 -'  4  16  ~/.bash_aliases
 -'  21  124  ~/.bash_aliases
@@ -160,73 +211,33 @@ $top-menu
 -'  5  0  ~/Documents/Cabinet/r3.txt
 -'  1  0  ~/Documents/Cabinet/r3.txt
 -'  1  0  ~/Documents/Cabinet/r1.txt
--'  20  0  ~/.bash_aliases
--'  112  6  ~/Development/Processing/AsciiVideo/AsciiVideo.pde
--'  6  0  ~/Development/Processing/AsciiVideo/AsciiVideo.pde
--'  1  0  ~/Development/Processing/AsciiVideo/AsciiVideo.pde
--'  58  0  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  68  4  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  63  29  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  31  23  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  64  17  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  67  15  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  69  30  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  71  0  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  60  6  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  32  71  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  30  44  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  1  0  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  61  17  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  39  16  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  26  0  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  6  0  ~/Development/Arduino/BlinkWithoutDelay/BlinkWithoutDelay.pde
--'  9  0  ~/Development/bitbucket.org/ibis20/setup.py
--'  1  0  ~/Development/bitbucket.org/ibis20/setup.py
--'  2  0  ~/Development/Arduino/:q
--'  1  0  ~/Development/Arduino/:q
--'  90  0  ~/.vimrc
--'  2  0  ~/.vimrc
--'  10  0  ~/Development/Arduino/:q
--'  14  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  63  0  ~/Development/Arduino/:q
--'  1  0  /Applications/EAGLE/scr/eagle.scr
--'  1  0  ~/Downloads/sparkfun-SparkFun-Eagle-Library-789f46e/README
--'  3909  282  ~/Documents/Cabinet/thot.txt
--'  3907  97  ~/Documents/Cabinet/thot.txt
--'  3906  243  ~/Documents/Cabinet/thot.txt
--'  6  0  ~/Documents/Cabinet/thot.txt
--'  3905  1094  ~/Documents/Cabinet/thot.txt
--'  3904  471  ~/Documents/Cabinet/thot.txt
--'  3903  1284  ~/Documents/Cabinet/thot.txt
--'  3874  1496  ~/Documents/Cabinet/thot.txt
--'  3873  921  ~/Documents/Cabinet/thot.txt
--'  343  17  ~/Development/katran/env-katran/katran/static/katran/css/style.scss
--'  344  17  ~/Development/katran/env-katran/katran/static/katran/css/style.scss
--'  329  20  ~/Development/katran/env-katran/katran/static/katran/css/style.scss
--'  1  0  ~/Development/katran/env-katran/katran/static/katran/css/style.scss
--'  8  4  ~/Development/katran/env-katran/katran/dashboard/templatetags/dashboard_tags.py
--'  1  0  ~/Development/katran/env-katran/katran/dashboard/templatetags/dashboard_tags.py
--'  78  0  ~/Development/katran/env-katran/katran/settings.py
--'  2  0  ~/Development/katran/env-katran/katran/settings.py
--'  1  0  ~/Development/katran/env-katran/katran/settings.py
--'  3  7  ~/Development/katran/env-katran/katran/static/katran/js/ui.js
--'  41  0  ~/Development/katran/env-katran/katran/static/katran/js/ui.js
--'  1  0  ~/Development/katran/env-katran/katran/static/katran/js/ui.js
--'  8  34  ~/Development/katran/env-katran/katran/entries/templates/entries/book_detail.html
--'  6  0  ~/Development/katran/env-katran/katran/entries/templates/entries/book_detail.html
--'  1  0  ~/Development/katran/env-katran/katran/entries/templates/entries/book_detail.html
--'  4  16  ~/.bash_aliases
--'  21  124  ~/.bash_aliases
--'  1  0  ~/.bash_aliases
+-'  8  0  ~/ls -la - 1
 
 # History of marks within files (newest to oldest):
 
 > ~/.git/COMMIT_EDITMSG
-	"	1	43
-	^	1	44
-	.	1	43
-	+	1	43
+	"	1	0
+	^	1	8
+	.	1	7
+	+	1	7
+
+> ~/.gitignore
+	"	18	0
+	^	18	0
+	.	18	0
+	+	20	0
+	+	19	0
+	+	18	0
+
+> ~/ls -la - 1
+	"	8	0
+	^	55	0
+	.	55	0
+	+	1	0
+	+	55	0
+
+> ~/.eaglerc
+	"	1	0
 
 > ~/.vim/.gitignore
 	"	1	2
@@ -2369,26 +2380,3 @@ $top-menu
 	+	7	0
 	+	6	0
 	+	8	160
-
-> ~/Development/katran/env-katran/katran/templates/menu/prev_next_links.html
-	"	1	125
-	^	1	126
-	.	1	125
-	+	3	0
-	+	2	0
-	+	1	0
-	+	1	125
-
-> ~/Development/katran/env-katran/katran/templates/index.html
-	"	1	0
-	^	20	28
-	.	20	27
-	+	4	0
-	+	19	0
-	+	18	0
-	+	19	14
-	+	22	2
-	+	20	27
-
-> ~/Development/katran/env-katran/katran/static/katran/css/style.css
-	"	1	0

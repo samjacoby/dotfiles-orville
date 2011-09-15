@@ -10,3 +10,10 @@ Pictures
 Public
 Sites
 Utils
+.ssh
+.subversion
+.timetrap.db
+.DS_Store
+.Trash
+
+
