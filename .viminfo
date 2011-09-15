@@ -17,8 +17,8 @@
 $top-menu
 
 # Command Line History (newest to oldest):
-:wq
 :q
+:wq
 :ConqueTermSplit ls -la
 :w
 :ConqueTerm cd ~/Development/threepress.org.svn.threepress.clients/oreillymedia/repos/ofps2/ofps20/kkk
@@ -103,21 +103,25 @@ $top-menu
 	o
 
 # File marks:
-'0  19  0  ~/.gitignore
-'1  1  29  ~/.git/COMMIT_EDITMSG
-'2  8  0  ~/ls -la - 1
-'3  1  0  ~/.eaglerc
-'4  1  2  ~/.vim/.gitignore
-'5  4  16  ~/.bash_aliases
-'6  21  42  ~/.bash_aliases
-'7  64  0  ~/Development/htm/basic/layout/base.j2
-'8  1  0  ~/Development/htm/basic/README.markdown
-'9  17  0  ~/Development/htm/site/layout/macros.j2
+'0  1  0  ~/.my.cnf
+'1  1  0  ~/.pip/pip.log
+'2  6  0  ~/.macports/history
+'3  1  17  ~/.git/COMMIT_EDITMSG
+'4  19  0  ~/.gitignore
+'5  8  0  ~/ls -la - 1
+'6  1  0  ~/.eaglerc
+'7  1  2  ~/.vim/.gitignore
+'8  4  16  ~/.bash_aliases
+'9  21  42  ~/.bash_aliases
 
 # Jumplist (newest first):
+-'  1  0  ~/.my.cnf
+-'  1  0  ~/.pip/pip.log
+-'  6  0  ~/.macports/history
+-'  1  0  ~/.macports/history
+-'  1  17  ~/.git/COMMIT_EDITMSG
 -'  19  0  ~/.gitignore
 -'  1  0  ~/.gitignore
--'  1  29  ~/.git/COMMIT_EDITMSG
 -'  8  0  ~/ls -la - 1
 -'  54  0  ~/ls -la - 1
 -'  53  0  ~/ls -la - 1
@@ -209,12 +213,23 @@ $top-menu
 -'  3910  1746  ~/Documents/Cabinet/thot.txt
 -'  4  355  ~/Documents/Cabinet/r3.txt
 -'  3  259  ~/Documents/Cabinet/r3.txt
--'  5  0  ~/Documents/Cabinet/r3.txt
--'  1  0  ~/Documents/Cabinet/r3.txt
--'  1  0  ~/Documents/Cabinet/r1.txt
--'  8  0  ~/ls -la - 1
 
 # History of marks within files (newest to oldest):
+
+> ~/.my.cnf
+	"	1	0
+
+> ~/.pip/pip.log
+	"	1	0
+
+> ~/.macports/history
+	"	6	0
+
+> ~/.git/COMMIT_EDITMSG
+	"	1	17
+	^	1	18
+	.	1	17
+	+	1	17
 
 > ~/.gitignore
 	"	19	0
@@ -223,12 +238,6 @@ $top-menu
 	+	18	0
 	+	18	0
 	+	18	6
-
-> ~/.git/COMMIT_EDITMSG
-	"	1	29
-	^	1	30
-	.	1	29
-	+	1	29
 
 > ~/ls -la - 1
 	"	8	0
@@ -2222,162 +2231,3 @@ $top-menu
 	+	164	0
 	+	173	0
 	+	171	0
-
-> ~/Development/katran/env-katran/katran/templates/entries/typography_detail.html
-	"	9	4
-	^	7	28
-	.	17	0
-	+	1	0
-	+	12	21
-	+	24	6
-	+	17	0
-	+	21	0
-	+	8	0
-	+	11	0
-	+	8	0
-	+	17	0
-	+	21	0
-	+	8	19
-	+	11	7
-	+	8	0
-	+	7	20
-	+	29	5
-	+	8	0
-	+	29	0
-	+	20	0
-	+	21	0
-	+	23	0
-	+	12	19
-	+	7	22
-	+	7	27
-	+	17	0
-
-> ~/Development/katran/env-katran/katran/stamps/templatetags/stamps_tags.py
-	"	53	0
-	^	59	31
-	.	59	30
-	+	242	3
-	+	241	42
-	+	243	24
-	+	244	33
-	+	258	77
-	+	232	0
-	+	228	0
-	+	260	0
-	+	264	0
-	+	261	47
-	+	263	0
-	+	262	94
-	+	264	0
-	+	265	0
-	+	271	25
-	+	244	21
-	+	263	0
-	+	266	32
-	+	244	29
-	+	228	0
-	+	220	76
-	+	222	0
-	+	263	47
-	+	263	44
-	+	263	20
-	+	263	0
-	+	263	23
-	+	263	0
-	+	263	0
-	+	263	0
-	+	224	0
-	+	223	21
-	+	224	0
-	+	223	0
-	+	226	31
-	+	225	57
-	+	226	81
-	+	227	20
-	+	229	56
-	+	33	0
-	+	49	37
-	+	51	23
-	+	53	0
-	+	56	0
-	+	67	0
-	+	57	0
-	+	67	45
-	+	57	30
-	+	58	38
-	+	58	0
-	+	58	86
-	+	63	20
-	+	63	37
-	+	63	0
-	+	63	0
-	+	63	0
-	+	60	53
-	+	62	21
-	+	58	0
-	+	62	20
-	+	63	0
-	+	58	57
-	+	81	30
-	+	57	0
-	+	58	25
-	+	61	24
-	+	58	0
-	+	58	59
-	+	59	19
-	+	84	26
-	+	190	0
-	+	191	0
-	+	187	28
-	+	190	15
-	+	189	47
-	+	190	0
-	+	191	29
-	+	188	46
-	+	188	0
-	+	189	34
-	+	189	0
-	+	189	0
-	+	190	0
-	+	201	26
-	+	59	89
-	+	60	0
-	+	59	49
-	+	59	29
-	+	61	38
-	+	71	0
-	+	59	42
-	+	57	34
-	+	57	24
-	+	58	81
-	+	59	0
-	+	57	0
-	+	61	0
-	+	58	0
-	+	58	83
-	+	59	30
-
-> ~/Development/katran/env-katran/katran/templates/menu/stamp_links.html
-	"	9	15
-	^	8	160
-	.	8	160
-	+	12	85
-	+	12	0
-	+	12	0
-	+	7	38
-	+	12	81
-	+	6	0
-	+	10	3
-	+	12	0
-	+	12	80
-	+	12	0
-	+	12	87
-	+	9	0
-	+	12	0
-	+	12	96
-	+	11	0
-	+	11	78
-	+	8	0
-	+	7	0
-	+	6	0
-	+	8	160
