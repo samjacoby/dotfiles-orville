@@ -17,8 +17,8 @@
 $top-menu
 
 # Command Line History (newest to oldest):
-:q
 :wq
+:q
 :ConqueTermSplit ls -la
 :w
 :ConqueTerm cd ~/Development/threepress.org.svn.threepress.clients/oreillymedia/repos/ofps2/ofps20/kkk
@@ -71,23 +71,23 @@ $top-menu
 	alias ofps='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/alistapart/responsive-web-design'
 ""1	LINE	0
 	
-"2	LINE	0
-	Lets keep this updated.
-"3	LINE	0
-	alias ibis20='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/alistapart/responsive-web-design'
-"4	LINE	0
 	
+"2	LINE	0
+	
+"3	LINE	0
+	Lets keep this updated.
+"4	LINE	0
+	alias ibis20='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/alistapart/responsive-web-design'
 "5	LINE	0
 	
 "6	LINE	0
-	      augroup END
-"7	LINE	0
 	
+"7	LINE	0
+	      augroup END
 "8	LINE	0
 	
 "9	LINE	0
-	      "for CSS, also have things in braces indented:
-	      autocmd BufNewFile,BufRead *.txt set filetype=human
+	
 "a	LINE	0
 	                        **self.header)
 "k	CHAR	0
@@ -103,19 +103,21 @@ $top-menu
 	o
 
 # File marks:
-'0  1  0  ~/.git/COMMIT_EDITMSG
-'1  8  0  ~/ls -la - 1
-'2  1  0  ~/.eaglerc
-'3  1  2  ~/.vim/.gitignore
-'4  4  16  ~/.bash_aliases
-'5  21  42  ~/.bash_aliases
-'6  64  0  ~/Development/htm/basic/layout/base.j2
-'7  1  0  ~/Development/htm/basic/README.markdown
-'8  17  0  ~/Development/htm/site/layout/macros.j2
-'9  6  0  ~/Development/htm/site/layout/listing.j2
+'0  19  0  ~/.gitignore
+'1  1  29  ~/.git/COMMIT_EDITMSG
+'2  8  0  ~/ls -la - 1
+'3  1  0  ~/.eaglerc
+'4  1  2  ~/.vim/.gitignore
+'5  4  16  ~/.bash_aliases
+'6  21  42  ~/.bash_aliases
+'7  64  0  ~/Development/htm/basic/layout/base.j2
+'8  1  0  ~/Development/htm/basic/README.markdown
+'9  17  0  ~/Development/htm/site/layout/macros.j2
 
 # Jumplist (newest first):
--'  1  0  ~/.git/COMMIT_EDITMSG
+-'  19  0  ~/.gitignore
+-'  1  0  ~/.gitignore
+-'  1  29  ~/.git/COMMIT_EDITMSG
 -'  8  0  ~/ls -la - 1
 -'  54  0  ~/ls -la - 1
 -'  53  0  ~/ls -la - 1
@@ -171,7 +173,6 @@ $top-menu
 -'  2  0  ~/ls -la - 1
 -'  1  0  ~/ls -la - 1
 -'  12  0  ~/.gitignore
--'  1  0  ~/.gitignore
 -'  1  0  ~/.eaglerc
 -'  402  0  ~/.eaglerc
 -'  1  2  ~/.vim/.gitignore
@@ -215,19 +216,19 @@ $top-menu
 
 # History of marks within files (newest to oldest):
 
-> ~/.git/COMMIT_EDITMSG
-	"	1	0
-	^	1	8
-	.	1	7
-	+	1	7
-
 > ~/.gitignore
-	"	18	0
-	^	18	0
-	.	18	0
-	+	20	0
-	+	19	0
+	"	19	0
+	^	19	0
+	.	18	6
 	+	18	0
+	+	18	0
+	+	18	6
+
+> ~/.git/COMMIT_EDITMSG
+	"	1	29
+	^	1	30
+	.	1	29
+	+	1	29
 
 > ~/ls -la - 1
 	"	8	0
