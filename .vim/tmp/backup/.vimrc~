@@ -521,9 +521,6 @@ augroup END
 " }}}
 " Jinja {{{
 augroup ft_jinja
-    au!
-    au BufNewFile,BufRead *.j2 setlocal filetype=jinja
-augroup END
 " }}}
 " Markdown {{{
 
