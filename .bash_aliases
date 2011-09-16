@@ -12,6 +12,8 @@ alias shackman='cd /Users/sjacoby/Development/Shackman/ && source shackman-env/b
 alias katran='cd /Users/sjacoby/Development/katran/env-katran/katran && source ../bin/activate'
 # Portfolio site
 alias portfolio='cd /Users/sjacoby/Development/Shackman/portfolio && source ../shackman-env/bin/activate'
+# ML Site
+alias hlt='cd /Users/sjacoby/Development/hlt && source bin/activate'
 
 ##
 ## Threepress
