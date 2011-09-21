@@ -511,6 +511,12 @@ augroup ft_javascript
 augroup END
 
 " }}}
+" Jinja {{{
+augroup ft_jinja
+    au!
+    au BufNewFile,BufRead *.j2 setlocal filetype=jinja
+augroup END
+" }}}
 " Lisp {{{
 
 augroup ft_lisp
@@ -518,12 +524,6 @@ augroup ft_lisp
     au FileType lisp call TurnOnLispFolding()
 augroup END
 
-" }}}
-" Jinja {{{
-augroup ft_jinja
-    au!
-    au BufNewFile,BufRead *.j2 setlocal filetype=jinja
-augroup END
 " }}}
 " Markdown {{{
 
@@ -581,6 +581,12 @@ augroup ft_python
     au FileType python setlocal omnifunc=pythoncomplete#Complete
 augroup END
 
+" }}}
+" Processing {{{
+augroup ft_processing
+    au!
+    au BufNewFile,BufRead *.pde setlocal filetype=c.processing
+augroup END
 " }}}
 " QuickFix {{{
 

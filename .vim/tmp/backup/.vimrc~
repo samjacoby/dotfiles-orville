@@ -511,6 +511,12 @@ augroup ft_javascript
 augroup END
 
 " }}}
+" Jinja {{{
+augroup ft_jinja
+    au!
+    au BufNewFile,BufRead *.j2 setlocal filetype=jinja
+augroup END
+" }}}
 " Lisp {{{
 
 augroup ft_lisp
@@ -518,9 +524,6 @@ augroup ft_lisp
     au FileType lisp call TurnOnLispFolding()
 augroup END
 
-" }}}
-" Jinja {{{
-augroup ft_jinja
 " }}}
 " Markdown {{{
 
@@ -578,6 +581,12 @@ augroup ft_python
     au FileType python setlocal omnifunc=pythoncomplete#Complete
 augroup END
 
+" }}}
+" Arduino {{{
+augroup ft_arduino
+    au!
+    au BufNewFile,BufRead *.pde setlocal filetype=arduino
+augroup END
 " }}}
 " QuickFix {{{
 
