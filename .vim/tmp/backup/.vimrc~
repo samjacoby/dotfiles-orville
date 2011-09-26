@@ -169,8 +169,8 @@ iabbrev sj@ sjacoby@media.mit.edu
 " Searching and movement ------------------------------------------------------ {{{
 
 " Use sane regexes.
-nnoremap / /\v
-vnoremap / /\v
+" "nnoremap / /\v
+" "vnoremap / /\v
 
 set ignorecase
 set smartcase
@@ -582,10 +582,10 @@ augroup ft_python
 augroup END
 
 " }}}
-" Arduino {{{
-augroup ft_arduino
+" Processing {{{
+augroup ft_processing
     au!
-    au BufNewFile,BufRead *.pde setlocal filetype=arduino
+    au BufNewFile,BufRead *.pde setlocal filetype=c.processing
 augroup END
 " }}}
 " QuickFix {{{

@@ -11,7 +11,7 @@ alias thot='vim ~/Documents/Cabinet/thot.txt'
 
 # Personal site
 alias shackman='cd /Users/sjacoby/Development/Shackman/ && source shackman-env/bin/activate'
-# Michaels site
+# Michael's site
 alias katran='cd /Users/sjacoby/Development/katran/env-katran/katran && source ../bin/activate'
 # Portfolio site
 alias portfolio='cd /Users/sjacoby/Development/Shackman/portfolio && source ../shackman-env/bin/activate'
@@ -19,6 +19,11 @@ alias portfolio='cd /Users/sjacoby/Development/Shackman/portfolio && source ../s
 alias hlt='cd /Users/sjacoby/Development/hlt && source bin/activate'
 # Arduino
 alias arduino='cd /Users/sjacoby/Development/Arduino/'
+alias arduino-dev='cd /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino'
+
+# SSH Aliases
+alias ml-web='ssh sjacoby@ml.media.mit.edu'
+alias shackman-web='ssh shackman@shackmanpress.com'
 
 ##
 ## Threepress
