@@ -311,7 +311,6 @@ set foldtext=MyFoldText()
 
 " }}}
 " Destroy infuriating keys ---------------------------------------------------- {{{
-
 " Fuck you, help key.
 " set fuoptions=maxvert,maxhorz
 noremap  <F1> :set invfullscreen<CR>
