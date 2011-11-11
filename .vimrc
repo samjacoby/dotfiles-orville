@@ -25,8 +25,8 @@ set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
-set nonumber
-set norelativenumber
+set number
+set relativenumber
 set laststatus=2
 set history=1000
 set undofile
@@ -172,6 +172,7 @@ iabbrev sj@ sjacoby@media.mit.edu
 " "nnoremap / /\v
 " "vnoremap / /\v
 
+
 set ignorecase
 set smartcase
 set incsearch
@@ -276,6 +277,10 @@ vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR><c-o>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR><c-o>
 " }}}
 
+" }}}
+" Buffer Resizing {{{ 
+vnoremap <C>< <C-w><
+vnoremap <C>> <C-w>>
 " }}}
 " Folding --------------------------------------------------------------------- {{{
 
@@ -871,9 +876,8 @@ noremap  <F2> :NERDTreeToggle<cr>
 inoremap <F2> <esc>:NERDTreeToggle<cr>
 
 au Filetype nerdtree setlocal nolist
-
 let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$', 'whoosh_index', 'xapian_index', '.*.pid', 'monitor.py', '.*-fixtures-.*.json', '.*\.o$', 'db.db']
+let NERDTreeIgnore=['.vim$', '\~$', '.*\.txt$', '.*\.pyc$', 'pip-log\.txt$', 'whoosh_index', 'xapian_index', '.*.pid', 'monitor.py', '.*-fixtures-.*.json', '.*\.o$', 'db.db']
 
 " }}}
 " OrgMode {{{
@@ -972,7 +976,7 @@ let g:threesome_wrap = "nowrap"
 " VimClojure {{{
 
 let vimclojure#HighlightBuiltins = 1
-let vimclojure#ParenRainbow = 1
+let vimclojure#ParenRainbow = 0
 let vimclojure#WantNailgun = 0
 
 " }}}
