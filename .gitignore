@@ -19,3 +19,5 @@ Utils
 .dropbox
 .viminfo
 .vim/tmp
+*tmp*
+*.swp

@@ -1,6 +1,6 @@
 [ui]
 merge = vimdiff
-username = Sam Jacoby <sam@threepress.org>
+username = Sam Jacoby <sjacoby@media.mit.edu>
 verbose = True
 [extensions]
 hgext.graphlog=
@@ -11,3 +11,5 @@ transplant=
 [merge-tools]
 vimdiff.executable = vim
 vimdiff.args = -d $base $local $output $other +close +close
+[paths]
+mol = ssh://hg@bitbucket.org/samjacoby/mol

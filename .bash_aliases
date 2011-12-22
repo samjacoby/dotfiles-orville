@@ -1,6 +1,7 @@
 # Bash Aliases
 alias ll='ls -l'
 alias la='ls -la'
+alias cab='cd ~/Documents/Cabinet/'
 
 # Used for JSLint
 alias js='java org.mozilla.javascript.tools.shell.Main'
@@ -8,6 +9,8 @@ alias js='java org.mozilla.javascript.tools.shell.Main'
 # Thot
 alias prop='~/Utils/./prop.sh'
 alias thot='vim ~/Documents/Cabinet/thot.txt'
+alias ids='vim ~/Documents/Cabinet/id.txt'
+alias notes='vim ~/Documents/Cabinet/notes.txt'
 
 # Personal site
 alias shackman='cd /Users/sjacoby/Development/Shackman/ && source shackman-env/bin/activate'
@@ -23,7 +26,9 @@ alias arduino-dev='cd /Applications/Arduino.app/Contents/Resources/Java/hardware
 
 # SSH Aliases
 alias ml-web='ssh sjacoby@ml.media.mit.edu'
+alias mit-web='ssh sjacoby@x.dialup.mit.edu'
 alias shackman-web='ssh shackman@shackmanpress.com'
+
 
 ##
 ## Threepress
