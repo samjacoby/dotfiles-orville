@@ -1,48 +1,63 @@
 " .vimrc, largely culled form @stevelosh
-
-
+" Preamble {{{
 call pathogen#infect()
 syntax on
 filetype plugin indent on
 set nocompatible
-
+"}}}
 " Basic options {{{
-"
+set encoding=utf8
 set backspace=indent,eol,start
+set visualbell
+set showbreak=↪
 set number
 set relativenumber
 set undofile
 set undoreload=10000
+set lazyredraw	" Don't redraw mid-execution of something
+set laststatus=2  " Always display statusbar
+set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
+set fillchars=diff:⣿
 
 " Resize splits when the window is resized (now that I've got mouse options)
 au VimResized * exe "normal! \<c-w>="
 
 " }}}
-
 " Leader {{{
 
 let mapleader = ","
 let maplocalleader = "\\"
 
 " }}}
-
-" Convenience mappings -------------------------------------------------------- {{{
-
+" Convenience Mappings {{{
 " Faster Esc
 inoremap jk <esc>
 vnoremap jk <esc>
 
+" Sudo to write
+cmap w!! w !sudo tee % >/dev/null
 
-" Quick editing --------------------------------------------------------------- {{{
-set pastetoggle=<F2>
+" Emacs-like bindings in the command line
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
+
+" Better Completion
+set completeopt=longest,menuone,preview
+
+" }}}
+" Colorscheme {{{
+syntax on
+set background=dark
+colorscheme molokai
+" }}}
+" Quick editing {{{ 
+set pastetoggle=<F8>
 vnoremap <silent>y "*y<cr><esc>
 nnoremap <leader>ev <C-w>s<C-w>j<C-w>L:e $MYVIMRC<cr>
 nnoremap <leader>eq :!hg commit -R ~/Documents/Cabinet/ -m 'Checking in...' <bar> hg push mol<cr><cr>
 nnoremap <leader>ep :!prop up<cr><cr> 
 nnoremap <leader>es :source $MYVIMRC<cr>
-inoremap <tab> <c-x><c-o>
 " }}}
-
 " Directional Keys {{{
 
 " It's 2012.
@@ -61,7 +76,18 @@ noremap <leader>q <C-w>q
 set mouse=a
 
 " }}}
+" Tabs, spaces, wrapping {{{
 
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set wrap
+set textwidth=80
+set formatoptions=qrn1
+set colorcolumn=+1
+
+" }}}
 " Searching {{{
 
 noremap <leader><space> :noh<cr>:call clearmatches()<cr>
@@ -71,9 +97,12 @@ set smartcase
 set incsearch
 set showmatch
 set hlsearch
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Center finding searches
 
 " }}}
-
 " Backups {{{
 
 set undodir=~/.vim/tmp/undo//     " undo files
@@ -83,8 +112,27 @@ set backup                        " enable backups
 set noswapfile
 
 " }}}
+" Shell {{{ 
 
-" Statusline ----------------------------------------------------------------- {{{
+function! s:ExecuteInShell(command) " {{{
+    let command = join(map(split(a:command), 'expand(v:val)'))
+    let winnr = bufwinnr('^' . command . '$')
+    silent! execute  winnr < 0 ? 'botright vnew ' . fnameescape(command) : winnr . 'wincmd w'
+    setlocal buftype=nowrite bufhidden=wipe nobuflisted noswapfile nowrap nonumber
+    echo 'Execute ' . command . '...'
+    silent! execute 'silent %!'. command
+    silent! redraw
+    silent! execute 'au BufUnload <buffer> execute bufwinnr(' . bufnr('#') . ') . ''wincmd w'''
+    silent! execute 'nnoremap <silent> <buffer> <LocalLeader>r :call <SID>ExecuteInShell(''' . command . ''')<CR>:AnsiEsc<CR>'
+    silent! execute 'nnoremap <silent> <buffer> q :q<CR>'
+    silent! execute 'AnsiEsc'
+    echo 'Shell command ' . command . ' executed.'
+endfunction " }}}
+command! -complete=shellcmd -nargs=+ Shell call s:ExecuteInShell(<q-args>)
+nnoremap <leader>! :Shell 
+
+" }}}
+" Statusline {{{  
 
 augroup ft_statuslinecolor
     au!
@@ -119,4 +167,121 @@ set statusline+=)
 " Line and column position and counts.
 set statusline+=\ (line\ %l\/%L,\ col\ %03c)
 " }}}
+" Folding {{{
+set foldlevelstart=0
 
+" Make the current location sane.
+nnoremap <c-cr> zvzt
+
+" Space to toggle folds.
+nnoremap <Space> za
+vnoremap <Space> za
+
+set foldmethod=marker
+nnoremap <leader>z zMzvzz
+
+" Use ,z to "focus" the current fold.
+nnoremap <leader>z zMzvzz
+
+function! MyFoldText() " {{{
+    let line = getline(v:foldstart)
+
+    let nucolwidth = &fdc + &number * &numberwidth
+    let windowwidth = winwidth(0) - nucolwidth - 3
+    let foldedlinecount = v:foldend - v:foldstart
+
+    " expand tabs into spaces
+    let onetab = strpart('          ', 0, &tabstop)
+    let line = substitute(line, '\t', onetab, 'g')
+
+    let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
+    let fillcharcount = windowwidth - len(line) - len(foldedlinecount)
+    return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
+endfunction " }}}
+set foldtext=MyFoldText()
+
+" }}}
+" Filetype-actions {{{
+" HTML {{{
+augroup ft_html
+	au!
+	" Use <localleader>f to fold the current tag.
+	au FileType html,jinja,htmldjango nnoremap <buffer> <localleader>f Vatzf
+"}}}
+" CSS and LessCSS {{{
+
+augroup ft_css
+    au!
+
+    au BufNewFile,BufRead *.less setlocal filetype=less
+
+    au Filetype less,css setlocal foldmethod=marker
+    au Filetype less,css setlocal foldmarker={,}
+    au Filetype less,css setlocal omnifunc=csscomplete#CompleteCSS
+    au Filetype less,css setlocal iskeyword+=-
+
+    " Use <localleader>S to sort properties.  Turns this:
+    "
+    "     p {
+    "         width: 200px;
+    "         height: 100px;
+    "         background: red;
+    "
+    "         ...
+    "     }
+    "
+    " into this:
+
+    "     p {
+    "         background: red;
+    "         height: 100px;
+    "         width: 200px;
+    "
+    "         ...
+    "     }
+    au BufNewFile,BufRead *.less,*.css nnoremap <buffer> <localleader>S ?{<CR>jV/\v^\s*\}?$<CR>k:sort<CR>:noh<CR>
+
+    " Make {<cr> insert a pair of brackets in such a way that the cursor is correctly
+    " positioned inside of them AND the following code doesn't get unfolded.
+    au BufNewFile,BufRead *.less,*.css inoremap <buffer> {<cr> {}<left><cr><space><space><space><space>.<cr><esc>kA<bs>
+augroup END
+
+" }}}
+" NerdTREE {{{
+noremap <F2> :NERDTreeToggle<cr>
+inoremap <F2> <esc>:NERDTreeToggle<cr>
+
+" Current file, whereverever ye shall be
+noremap <leader><F2> :NERDTreeFind<cr>
+inoremap <leader><F2> <esc>:NERDTreeFind<cr>
+
+" Show hidden files, please.
+let NERDTreeShowHidden=0
+
+" Single click to open directories, double for files
+let NERDTreeMouseMode=2
+
+let NERDTreeHighlightCursorLine=1
+
+
+"}}}"}}}
+" Powerline {{{
+let Powerline_symbols="fancy"
+"}}}
+" Supertab {{{
+
+let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabLongestHighlight = 1
+
+"}}}
+" Syntastic {{{
+
+let g:syntastic_enable_signs = 1
+let g:syntastic_disabled_filetypes = ['html']
+let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}]'
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+" }}}
+" CSS Color {{{
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+"}}}
