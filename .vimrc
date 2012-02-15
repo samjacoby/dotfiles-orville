@@ -1,4 +1,8 @@
 " .vimrc, largely culled form @stevelosh
+"
+"
+" Hodgepodge of useful things from sjl 
+
 " Preamble {{{
 call pathogen#infect()
 syntax on
@@ -18,6 +22,13 @@ set lazyredraw	" Don't redraw mid-execution of something
 set laststatus=2  " Always display statusbar
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 set fillchars=diff:⣿
+set ttyfast 
+set ruler
+set list
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set ttimeout
+set notimeout
+set nottimeout
 
 " Resize splits when the window is resized (now that I've got mouse options)
 au VimResized * exe "normal! \<c-w>="
@@ -47,8 +58,8 @@ set completeopt=longest,menuone,preview
 " }}}
 " Date {{{
 inoremap <leader>da <esc>:r!date +"\%Y-\%m-\%d\%H:\%M:\%S"<cr>$a 
-" }}}
 nnoremap <leader>da :r!date +"\%Y-\%m-\%d\%H:\%M:\%S"<cr>$ 
+" }}} 
 " Colorscheme {{{
 syntax on
 set background=dark
@@ -289,3 +300,11 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 " CSS Color {{{
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 "}}}
+" Filetype {{{
+" Text {{{
+    augroup ft_text 
+        au!
+    augroup END 
+
+" }}}
+" }}}
