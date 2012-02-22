@@ -304,6 +304,22 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 " Text {{{
     augroup ft_text 
         au!
+        au BufNewFile,BufRead *.txt setlocal filetype=text
+        au Filetype text setlocal linebreak
+        au Filetype text setlocal nolist
+        au Filetype text setlocal number
+        au Filetype text setlocal nonumber
+    augroup END 
+
+" }}}
+" Make {{{
+    augroup ft_make 
+        au!
+        au BufNewFile,BufRead *.mk setlocal filetype=make
+        au Filetype text setlocal linebreak
+        au Filetype text setlocal nolist
+        au Filetype text setlocal number
+        au Filetype text setlocal nonumber
     augroup END 
 
 " }}}
