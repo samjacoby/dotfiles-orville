@@ -40,6 +40,10 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 " }}}
+" Bash {{{
+set shellcmdflag=-lc
+set shell=/bin/bash\ --rcfile\ ~/.bashrc
+" }}}
 " Convenience Mappings {{{
 " Faster Esc
 inoremap jk <esc>
@@ -68,7 +72,6 @@ colorscheme molokai
 set pastetoggle=<F8>
 vnoremap <silent>y "*y<cr><esc>
 nnoremap <leader>ev <C-w>s<C-w>j<C-w>L:e $MYVIMRC<cr>
-nnoremap <leader>eq :!hg commit -R ~/Documents/Cabinet/ -m 'Checking in...' <bar> hg push mol<cr><cr>
 nnoremap <leader>ep :!prop up<cr><cr> 
 nnoremap <leader>es :source $MYVIMRC<cr>
 " }}}
@@ -318,7 +321,11 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
         au Filetype text setlocal nolist
         au Filetype text setlocal number
         au Filetype text setlocal nonumber
+        au Filetype text setlocal spell spelllang=en_us
     augroup END 
+    " Turn off spell where it's annoying. It's usually annoying.
+    autocmd BufRead notes.txt setlocal nospell
+    autocmd BufRead scratch.txt setlocal nospell
 
 " }}}
 " Make {{{

@@ -11,6 +11,8 @@ alias prop='~/Utils/./prop.sh'
 alias thot='vim ~/Documents/Cabinet/thot.txt'
 alias ids='vim ~/Documents/Cabinet/id.txt'
 alias notes='vim ~/Documents/Cabinet/notes.txt'
+alias scratch='vim ~/Documents/Cabinet/scratch.txt'
+alias num='~/Utils/./num.sh'
 
 # Personal site
 alias shackman='cd /Users/sjacoby/Development/Shackman/ && source shackman-env/bin/activate'
@@ -28,7 +30,6 @@ alias arduino-dev='cd /Applications/Arduino.app/Contents/Resources/Java/hardware
 alias ml-web='ssh sjacoby@ml.media.mit.edu'
 alias mit-web='ssh sjacoby@x.dialup.mit.edu'
 alias shackman-web='ssh shackman@shackmanpress.com'
-
 
 ##
 ## Threepress
