@@ -1,2 +1,11 @@
 [user]
-	email = sam@shackmanpress.com
+	email = sjacoby@media.mit.edu
+	name = "Sam Jacoby "
+[core]
+	excludesfile = /Users/sjacoby/.gitignore
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
