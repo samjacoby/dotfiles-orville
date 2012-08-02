@@ -274,6 +274,16 @@ augroup ft_arduino
 augroup END
 
 " }}}
+" Processing {{{
+
+augroup ft_processing
+    au!
+
+    au BufNewFile,BufRead *.pde setlocal filetype=java
+
+augroup END
+
+" }}}
 " NerdTREE {{{
 noremap <F2> :NERDTreeToggle<cr>
 inoremap <F2> <esc>:NERDTreeToggle<cr>
