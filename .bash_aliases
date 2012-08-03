@@ -20,6 +20,8 @@ alias shackman='cd /Users/sjacoby/Development/Shackman/ && source shackman-env/b
 alias katran='cd /Users/sjacoby/Development/katran/env-katran/katran && source ../bin/activate'
 # Portfolio site
 alias portfolio='cd /Users/sjacoby/Development/Shackman/portfolio && source ../shackman-env/bin/activate'
+# New site
+alias new-site='cd /Users/sjacoby/Development/Shackman/hyde_site/site && source ../new_hyde/bin/activate'
 # ML Site
 alias hlt='cd /Users/sjacoby/Development/hlt && source bin/activate'
 # Arduino

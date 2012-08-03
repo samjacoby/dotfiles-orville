@@ -219,6 +219,12 @@ set foldtext=MyFoldText()
 
 " }}}
 " Filetype-actions {{{
+" Jinja {{{
+augroup ft_jinja
+    au!
+    au BufNewFile,BufRead *.j2 setlocal filetype=jinja
+    
+" }}}
 " HTML {{{
 augroup ft_html
 	au!
