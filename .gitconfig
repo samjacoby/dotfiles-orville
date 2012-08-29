@@ -1,6 +1,6 @@
 [user]
 	email = sjacoby@media.mit.edu
-	name = "Sam Jacoby "
+	name = Sam Jacoby
 [core]
 	excludesfile = /Users/sjacoby/.gitignore
 [difftool "sourcetree"]

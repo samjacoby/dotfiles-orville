@@ -42,7 +42,8 @@ let maplocalleader = "\\"
 " }}}
 " Bash {{{
 set shellcmdflag=-lc
-set shell=/bin/bash\ --rcfile\ ~/.bashrc
+"set shell=/bin/bash\ --rcfile\ ~/.bashrc
+set shell=bash\ -l
 " }}}
 " Convenience Mappings {{{
 " Faster Esc
@@ -59,9 +60,9 @@ cnoremap <c-e> <end>
 set completeopt=longest,menuone,preview
 
 " }}}
-" Date {{{
-inoremap <leader>da <esc>:r!date +"\%Y-\%m-\%d\%H:\%M:\%S"<cr>$a 
-nnoremap <leader>da :r!date +"\%Y-\%m-\%d\%H:\%M:\%S"<cr>$ 
+" Date, Timestamp {{{
+inoremap <leader>da <esc>:r!date +"\%Y-\%m-\%d \%H:\%M:\%S"<cr>$a 
+nnoremap <leader>da :r!date +"\%Y-\%m-\%d \%H:\%M:\%S"<cr>$ 
 " }}} 
 " Colorscheme {{{
 syntax on

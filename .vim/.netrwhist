@@ -1,7 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/sjacoby/Development/shackman/shackman-env/src/hyde/hydeengine'
-let g:netrw_dirhist_2='/usr/local/texlive/2011basic/readme-txt.dir'
-let g:netrw_dirhist_3='/Users/sjacoby'
-let g:netrw_dirhist_4='/Users/sjacoby/Development'
-let g:netrw_dirhist_5='/Users/sjacoby/Development/shackman/site/test.yml'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/sjacoby/Development/shackman/new_site/site/content/posts/2012/8/21'
+let g:netrw_dirhist_2='/Users/sjacoby/Development/shackman/new_site/site/content/media'
+let g:netrw_dirhist_3='/Users/sjacoby/Development/shackman/new_site/site/content/printing'

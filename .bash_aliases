@@ -21,7 +21,7 @@ alias katran='cd /Users/sjacoby/Development/katran/env-katran/katran && source .
 # Portfolio site
 alias portfolio='cd /Users/sjacoby/Development/Shackman/portfolio && source ../shackman-env/bin/activate'
 # New site
-alias new-site='cd /Users/sjacoby/Development/Shackman/hyde_site/site && source ../new_hyde/bin/activate'
+alias new-site='cd /Users/sjacoby/Development/Shackman/new_site/site && source ../hyde_env/bin/activate'
 # ML Site
 alias hlt='cd /Users/sjacoby/Development/hlt && source bin/activate'
 # Arduino
