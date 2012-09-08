@@ -59,6 +59,11 @@ cnoremap <c-e> <end>
 " Better Completion
 set completeopt=longest,menuone,preview
 
+" Toggle list
+inoremap <leader>s :set list!<cr> 
+nnoremap <leader>s :set list!<cr> 
+vnoremap <leader>s :set list!<cr> 
+
 " }}}
 " Date, Timestamp {{{
 inoremap <leader>da <esc>:r!date +"\%Y-\%m-\%d \%H:\%M:\%S"<cr>$a 
@@ -90,8 +95,17 @@ noremap <C-l>  <C-w>l
 noremap <leader>g <C-w>v
 noremap <leader>q <C-w>q
 
-" Get some mouse action
-set mouse=a
+" Moving around in tabs
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+
 
 " }}}
 " Tabs, spaces, wrapping {{{
