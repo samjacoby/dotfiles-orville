@@ -42,3 +42,4 @@ alias ofps='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/
 alias ibis20='cd /Users/sjacoby/Development/bitbucket.org/ibis20/ibis'
 
 
+alias sketching="cd /Users/sjacoby/Documents/HLT/Papers/sketching"
