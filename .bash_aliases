@@ -11,6 +11,7 @@ alias prop='~/Utils/./prop.sh'
 alias thot='vim ~/Documents/Cabinet/thot.txt'
 alias ids='vim ~/Documents/Cabinet/id.txt'
 alias notes='vim ~/Documents/Cabinet/notes.txt'
+alias names='vim ~/Documents/Cabinet/names.txt'
 alias scratch='vim ~/Documents/Cabinet/scratch.txt'
 alias num='~/Utils/./num.sh'
 
@@ -43,3 +44,4 @@ alias ibis20='cd /Users/sjacoby/Development/bitbucket.org/ibis20/ibis'
 
 
 alias sketching="cd /Users/sjacoby/Documents/HLT/Papers/sketching"
+alias processing='cd /Users/sjacoby/Development/Processing'alias eagle='cd /Users/sjacoby/Development/eagle'

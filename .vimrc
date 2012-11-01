@@ -24,7 +24,7 @@ set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 set fillchars=diff:⣿
 set ttyfast 
 set ruler
-set list
+set nolist
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set ttimeout
 set notimeout
