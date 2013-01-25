@@ -1,9 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/sjacoby/Development/shackman/new_site/site/content/posts/2012/8/21'
-let g:netrw_dirhist_2='/Users/sjacoby/Development/shackman/new_site/site/content/media'
-let g:netrw_dirhist_3='/Users/sjacoby/Development/shackman/new_site/site/content/printing'
-let g:netrw_dirhist_4='/Users/sjacoby/Development/Arduino/TapClip/TapClip'
-let g:netrw_dirhist_5='/Users/sjacoby/Development/shackman/new_site/site/content/posts'
-let g:netrw_dirhist_6='/Users/sjacoby/Development/shackman/new_site/site/content/posts/posts'
-let g:netrw_dirhist_7='/Users/sjacoby/Development/shackman/new_site/site/content/printing'
+let g:netrw_dirhist_cnt =0

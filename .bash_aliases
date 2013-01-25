@@ -24,10 +24,12 @@ alias portfolio='cd /Users/sjacoby/Development/Shackman/portfolio && source ../s
 # New site
 alias new-site='cd /Users/sjacoby/Development/Shackman/new_site/site && source ../hyde_env/bin/activate'
 # ML Site
-alias hlt='cd /Users/sjacoby/Development/hlt && source bin/activate'
+alias hlt='cd /Users/sjacoby/Documents/hlt'
 # Arduino
 alias arduino='cd /Users/sjacoby/Development/Arduino/'
 alias arduino-dev='cd /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino'
+# EdFolio
+alias edfolio='cd /Users/sjacoby/Development/nodejs/playground/edfolio && source ../bin/activate'
 
 # SSH Aliases
 alias ml-web='ssh sjacoby@ml.media.mit.edu'
@@ -44,4 +46,7 @@ alias ibis20='cd /Users/sjacoby/Development/bitbucket.org/ibis20/ibis'
 
 
 alias sketching="cd /Users/sjacoby/Documents/HLT/Papers/sketching"
-alias processing='cd /Users/sjacoby/Development/Processing'alias eagle='cd /Users/sjacoby/Development/eagle'
+alias processing='cd /Users/sjacoby/Development/Processing'
+alias eagle='cd /Users/sjacoby/Development/eagle'
+alias aws-django-1.3-server='ssh -i ~/.ssh/orville.pem bitnami@ec2-107-21-76-31.compute-1.amazonaws.com'
+alias edfolio-web='ssh -i ~/.ssh/orville.pem sjacoby@107.20.217.206'

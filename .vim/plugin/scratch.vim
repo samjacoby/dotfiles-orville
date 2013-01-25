@@ -51,6 +51,18 @@ let loaded_scratch=1
 " Scratch buffer name
 let ScratchBufferName = "__Scratch__"
 
+
+function! s:ScratchBufferClose()
+    " Check if there's an existing buffer 
+    let scr_bufnum = bufnr(g:ScratchBufferName)
+    " If there is, close it. If there isn't, don't do a damn thing.
+    if scr_bufnum != -1
+        " Get wherever it is
+        let scr_winnum = bufwinnr(scr_bufnum)
+            exe "close"
+    endif
+endfunction
+
 " ScratchBufferOpen
 " Open the scratch buffer
 function! s:ScratchBufferOpen(new_win)
@@ -108,3 +120,5 @@ command! -nargs=0 Scratch call s:ScratchBufferOpen(0)
 " Command to open the scratch buffer in a new split window
 command! -nargs=0 Sscratch call s:ScratchBufferOpen(1)
 
+" Close buffer
+command! -nargs=0 Scscratch call s:ScratchBufferClose()

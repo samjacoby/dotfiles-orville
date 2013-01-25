@@ -29,6 +29,7 @@ set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set ttimeout
 set notimeout
 set nottimeout
+set mouse=a
 
 " Resize splits when the window is resized (now that I've got mouse options)
 au VimResized * exe "normal! \<c-w>="
@@ -75,11 +76,35 @@ set background=dark
 colorscheme molokai
 " }}}
 " Quick editing {{{ 
-set pastetoggle=<F8>
+" Make all yank-pasting global 
+nnoremap <silent>y "*y<cr><esc>
 vnoremap <silent>y "*y<cr><esc>
+nnoremap <silent>p "*p<cr><esc>
+vnoremap <silent>p "*p<cr><esc>
+
+" Copy into the global register
+nnoremap d "*d
+
 nnoremap <leader>ev <C-w>s<C-w>j<C-w>L:e $MYVIMRC<cr>
 nnoremap <leader>ep :!prop up<cr><cr> 
-nnoremap <leader>es :source $MYVIMRC<cr>
+nnoremap <leader>es :source $MYVIMRC<cr>:G<cr>
+
+" Open thot in a new split screen 
+nnoremap <leader>qw :split ~/Documents/Cabinet/thot.txt<cr>
+
+" Jump to last opened position 
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
 " }}}
 " Directional Keys {{{
 
@@ -123,6 +148,7 @@ set colorcolumn=+1
 " Searching {{{
 
 noremap <leader><space> :noh<cr>:call clearmatches()<cr>
+nnoremap / /\v
 
 set ignorecase
 set smartcase
@@ -209,11 +235,10 @@ nnoremap <c-cr> zvzt
 nnoremap <Space> za
 vnoremap <Space> za
 
+" Use ,z to "focus" the current fold.
 set foldmethod=marker
 nnoremap <leader>z zMzvzz
 
-" Use ,z to "focus" the current fold.
-nnoremap <leader>z zMzvzz
 
 function! MyFoldText() " {{{
     let line = getline(v:foldstart)
@@ -344,6 +369,17 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 "}}}
 " Filetype {{{
+" Tex {{{
+    augroup ft_text 
+        au!
+        au BufNewFile,BufRead *.tex setlocal filetype=tex
+        au Filetype text setlocal linebreak
+        au Filetype text setlocal nolist
+        au Filetype text setlocal number
+        au Filetype text setlocal nonumber
+        au Filetype text setlocal spell spelllang=en_us
+    augroup END 
+" }}}
 " Text {{{
     augroup ft_text 
         au!
@@ -370,4 +406,11 @@ let g:cssColorVimDoNotMessMyUpdatetime = 1
     augroup END 
 
 " }}}
+" }}}
+" Scratch {{{
+inoremap <leader>c <esc>:close<cr>
+nnoremap <leader>c :close<cr>
+inoremap <leader>sc <esc>:Sscratch<cr>
+nnoremap <leader>sc :Sscratch<cr>
+
 " }}}

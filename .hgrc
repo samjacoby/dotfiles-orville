@@ -3,15 +3,17 @@ merge = vimdiff
 username = Sam Jacoby <sjacoby@media.mit.edu>
 verbose = True
 ignore = ~/.hgignore
+
 [extensions]
 hgext.graphlog=
 fetch=
 purge=
 mq=
 transplant=
+
 [merge-tools]
 vimdiff.executable = vim
 vimdiff.args = -d $base $local $output $other +close +close
+
 [paths]
 mol = ssh://hg@bitbucket.org/samjacoby/mol
-S62 = ssh://hg@fab.cba.mit.edu/S62.12 -p 846 -i ~/.ssh/classes 

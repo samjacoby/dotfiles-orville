@@ -1,6 +1,7 @@
 export BASH_CONF="bash_profile"
 # MacPorts Installer addition on 2011-03-01_at_16:39:37: adding an appropriate PATH variable for use with MacPorts.
-export PATH=~/src/fabhg/bin:/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+#export PATH=~/src/fabhg/bin:/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # Arduino Board
@@ -18,6 +19,7 @@ export PATH=$PATH:/Users/sjacoby/Development/Android.sdk:/Users/sjacoby/Developm
 # Editor
 export EDITOR=vim
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 [ -r ~/.bashrc ] && source ~/.bashrc
 
 function epub()
