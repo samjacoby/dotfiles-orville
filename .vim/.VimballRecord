@@ -1,2 +1,3 @@
 delimitMate.vba: call delete('/Users/sjl/.vim/doc/delimitMate.txt')|call delete('/Users/sjl/.vim/plugin/delimitMate.vim')|call delete('/Users/sjl/.vim/autoload/delimitMate.vim')
 supertab.vba: call delete('/Users/sjacoby/.vim/doc/supertab.txt')|call delete('/Users/sjacoby/.vim/plugin/supertab.vim')
+screen.vba: call delete('/Users/sjacoby/.vim/autoload/screen.vim')|call delete('/Users/sjacoby/.vim/doc/screen.txt')|call delete('/Users/sjacoby/.vim/plugin/screen.vim')

@@ -76,18 +76,15 @@ set background=dark
 colorscheme molokai
 " }}}
 " Quick editing {{{ 
-" Make all yank-pasting global 
-nnoremap <silent>y "*y<cr><esc>
-vnoremap <silent>y "*y<cr><esc>
-nnoremap <silent>p "*p<cr><esc>
-vnoremap <silent>p "*p<cr><esc>
 
 " Copy into the global register
 nnoremap d "*d
+" Cut 
+"nnoremap xc '<,'> 
 
+" quickedit .vimrc 
 nnoremap <leader>ev <C-w>s<C-w>j<C-w>L:e $MYVIMRC<cr>
-nnoremap <leader>ep :!prop up<cr><cr> 
-nnoremap <leader>es :source $MYVIMRC<cr>:G<cr>
+nnoremap <leader>es :source $MYVIMRC<cr>
 
 " Open thot in a new split screen 
 nnoremap <leader>qw :split ~/Documents/Cabinet/thot.txt<cr>
@@ -199,7 +196,7 @@ augroup ft_statuslinecolor
     au InsertLeave * hi StatusLine ctermfg=130 guifg=#CD5907
 augroup END
 
-set statusline=%f    " Path.
+set statusline=%F    " Path.
 set statusline+=%m   " Modified flag.
 set statusline+=%r   " Readonly flag.
 set statusline+=%w   " Preview window flag.

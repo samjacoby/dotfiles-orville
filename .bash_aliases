@@ -24,7 +24,7 @@ alias portfolio='cd /Users/sjacoby/Development/Shackman/portfolio && source ../s
 # New site
 alias new-site='cd /Users/sjacoby/Development/Shackman/new_site/site && source ../hyde_env/bin/activate'
 # ML Site
-alias hlt='cd /Users/sjacoby/Documents/hlt'
+alias hlt='cd /Users/sjacoby/Documents/hlt/thesis'
 # Arduino
 alias arduino='cd /Users/sjacoby/Development/Arduino/'
 alias arduino-dev='cd /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino'
@@ -44,6 +44,7 @@ alias rwd='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/a
 alias ofps='cd /Users/sjacoby/Development/threepress.org.svn.threepress.clients/oreillymedia/repos/ofps2/ofps20/'
 alias ibis20='cd /Users/sjacoby/Development/bitbucket.org/ibis20/ibis'
 
+alias docs="cd ~/Documents/"
 
 alias sketching="cd /Users/sjacoby/Documents/HLT/Papers/sketching"
 alias processing='cd /Users/sjacoby/Development/Processing'
